@@ -50,4 +50,4 @@ public class Audio
 '@
 [audio]::Mute = $false
 [audio]::Volume = 0.20
-Start-Process "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+Start-Process "microsoft-edge:///?url=https://www.youtube.com/watch?v=xvFZjo5PgG0"
