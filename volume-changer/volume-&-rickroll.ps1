@@ -1,3 +1,8 @@
+$default = 1
+$volume = $v
+if ($null -eq $volume) {
+    $volume = $default
+}
 Add-Type -TypeDefinition @'
 using System.Runtime.InteropServices;
 [Guid("5CDF2C82-841E-4546-9722-0CF74078229A"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
@@ -49,5 +54,5 @@ public class Audio
 }
 '@
 [audio]::Mute = $false
-[audio]::Volume = 0.20
+[audio]::Volume = $volume
 Start-Process "microsoft-edge:///?url=https://www.youtube.com/watch?v=xvFZjo5PgG0"
