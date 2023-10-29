@@ -1,8 +1,4 @@
-$default = 1
-$volume = $v
-if ($null -eq $volume) {
-    $volume = $default
-}
+$volume = 1 # 100%
 Add-Type -TypeDefinition @'
 using System.Runtime.InteropServices;
 [Guid("5CDF2C82-841E-4546-9722-0CF74078229A"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
