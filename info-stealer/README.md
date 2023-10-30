@@ -1,10 +1,10 @@
 # Info-stealer
 
-# How to use
+## How to use
 
 Change YOUR_WEBHOOK with your discord webhook 
 
-# How to create discord webhook
+## How to create discord webhook
 
 1. Go to https://discord.com/app with your **PC**
 
@@ -24,7 +24,7 @@ Change YOUR_WEBHOOK with your discord webhook
 
 9. Example is **$dc='https://discord.com/api/webhooks/1234567890123456/nsGFadjfiadjDnijh8wgrinnAsdnjdADFfa'**
 
-# Disclaimer
+## Disclaimer
 
 This is purely for educational purposes only.
 
