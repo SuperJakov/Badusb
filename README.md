@@ -1,6 +1,6 @@
 # Badusb
 CREDITS TO BEIGEWORM
-## How to install
+## How to install badusb files
 
 **To install follow [THIS GUIDE](/How2Install.pdf)**
 
