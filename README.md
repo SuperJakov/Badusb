@@ -1,7 +1,7 @@
 # Badusb
 ## How to install badusb files
 
-**To install follow [THIS GUIDE](/How2Install.pdf)**
+**To install badusb files follow [THIS GUIDE](/How2Install.pdf)**
 
 ## Related projects
 
