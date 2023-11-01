@@ -5,7 +5,7 @@
 
 ## Related projects
 
-### Base64 encoder
+### Base64 encoder & decoder
 
 Do you hate when you have to encode and decode to base64 all the time?
 
