@@ -28,6 +28,10 @@ Change YOUR_WEBHOOK with your discord webhook
 
 **Follow same steps as info-stealer (1)**
 
+## How to use
+
+Change _$wait = 50_ to **$wait = WAIT_IN_SECONDS** (line 10)
+
 ## Why a time kill?
 
 I implemented a feature that will close the stealer after certain amount of time so it doesn't run forever and you get caught
