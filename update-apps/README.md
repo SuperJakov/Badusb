@@ -1,17 +1,13 @@
-# Update-apps
-
-This script opens powershell as admin and updates app using _winget upgrade --all_
-
 # Update-apps 2
 
 ## Differences
 
+This script opens powershell as admin and updates app using **_winget upgrade --all_**
+
 Version 2 will do the same as version 1, but it will have more prompting and is more user-friendly
 
-# Needs
+Version 2 removes winget-created desktop shortcuts
 
-Both version 1 and 2 have problem where desktop shortcuts are being created
+# Update-apps (OUTDATED)
 
-This isn't my fault, it's winget's
-
-I'm working on it
+This script opens powershell as admin and updates app using _winget upgrade --all_
