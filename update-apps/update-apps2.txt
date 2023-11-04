@@ -1,3 +1,5 @@
+REM update-apps2
+REM Time to execute: 36.4 
 GUI r 
 DELAY 500
 STRING Powershell

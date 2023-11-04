@@ -1,0 +1,8 @@
+REM open beigeworm's and my github repository, powershell and vs code
+GUI r
+DELAY 500
+STRING powershell 
+ENTER
+DELAY 3000
+STRING Start-Process "https://github.com/beigeworm/Powershell-Tools-and-Toys"; Start-Process "$env:USERPROFILE\AppData\Local\Programs\Microsoft VS Code\Code.exe"; Start-Process "https://github.com/SuperJakov/Badusb"; Clear-host
+ENTER

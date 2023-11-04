@@ -1,0 +1,1 @@
+Start-Process "https://github.com/beigeworm/Powershell-Tools-and-Toys"; Start-Process "$env:USERPROFILE\AppData\Local\Programs\Microsoft VS Code\Code.exe"; Start-Process "https://github.com/SuperJakov/Badusb"; Clear-host
