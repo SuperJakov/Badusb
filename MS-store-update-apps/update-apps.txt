@@ -1,0 +1,14 @@
+REM WINDOWS 11 ONLY
+REM update apps using Microsoft store
+GUI r
+DELAY 500
+STRING ms-windows-store:
+ENTER
+DELAY 6000
+TAB
+TAB
+TAB
+TAB
+SPACE
+DELAY 10000
+SPACE
