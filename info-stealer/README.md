@@ -2,7 +2,7 @@
 
 ## How to use
 
-Change YOUR_WEBHOOK with your discord webhook
+Change YOUR_WEBHOOK (line 5) with your discord webhook
 
 ## How to create discord webhook
 
