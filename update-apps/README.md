@@ -8,7 +8,7 @@ Version 2 will do the same as version 1, but it will have more prompting and is 
 
 Version 2 removes winget-created desktop shortcuts
 
-Version 3 requires github servers being up, no code is shown 
+**Version 3 requires github servers being up, no code is shown**
 
 Best: **v3**
 
