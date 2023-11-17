@@ -1,4 +1,4 @@
-# Badusb
+# Badusb for Flipper Zero
 ## How to install badusb files
 
 **To install badusb files follow [THIS GUIDE](/How2Install.pdf)**
