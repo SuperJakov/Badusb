@@ -1,0 +1,1 @@
+$list = @("https://github.com/SuperJakov", "https://github.com/SuperJakov/Badusb", "https://flipperzero.one", "https://shop.hak5.org/collections/mischief-gadgets/products/omg-plug?variant=40035873554545"); for ($i = 1; $i -le 30; $i++) { foreach ($item in $list) { Start-Process $item } }
