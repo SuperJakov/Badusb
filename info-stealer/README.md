@@ -1,5 +1,11 @@
 # Info-stealer
 
+## Issue
+
+I'm currently aware of an issue where Kaspersky stops upload of  systeminfo.txt . 
+
+I'm working on it.
+
 ## How to use
 
 Change YOUR_WEBHOOK (line 5) with your discord webhook
