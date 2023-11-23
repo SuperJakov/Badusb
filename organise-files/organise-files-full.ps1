@@ -1,7 +1,8 @@
 # Clear the screen
 Clear-Host
 # Get the folder path from the user input
-$folderPath = Read-Host "Type folder path to organise "
+$folderPath = Read-Host "Type folder path to organise (no single quotes) "
+$folderPath = $folderPath -replace '^[\"]|[\"]$'
 
 # Get all the subfolders in the root folder
 $subFolders = Get-ChildItem -Recurse -Path $folderPath -Directory 
