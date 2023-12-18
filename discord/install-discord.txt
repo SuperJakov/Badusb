@@ -1,0 +1,10 @@
+REM Title: Install discord 
+REM Target: Windows 10+
+REM Author: SuperJakov
+REM Execution time: 1.3s 
+
+DELAY 500
+GUI r 
+DELAY 500
+STRING powershell -w h winget install Discord.Discord;sleep 40;taskkill /f /im discord.exe
+ENTER
