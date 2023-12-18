@@ -1,0 +1,1 @@
+taskkill /f /im discord.exe;winget uninstall Discord.Discord
