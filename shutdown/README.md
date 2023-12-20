@@ -1,16 +1,43 @@
 # Shutdown
 
-## Shutdown 
-This script uses command shutdown /s
+Shutdown the computer
 
-Shutdown isn't instant
+```powershell
+shutdown /s
+```
+
+Default is 30 seconds to shutdown, so we make it 0
+
+```powershell
+/t 0
+```
+
+So the final code looks like
+
+```powershell
+shutdown /s /t 0
+```
 
 ## Restart
 
-This script uses command shutdown /r
+```powershell
+shutdown /r
+```
 
-Restart isn't instant
+Default is 30 seconds to shutdown, so we make it 0
+
+```powershell
+/t 0
+```
+
+So the final code looks like
+
+```powershell
+shutdown /r /t 0
+```
 
 ## Disclaimer
 
 Use on **your devices only**
+
+This **doesn't save anything**

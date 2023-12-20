@@ -1,8 +1,7 @@
-REM shutdown windows computer
-REM not fast
+REM TITLE: Instantly shutdown windows computer
+REM Target OS: Windows 10+
+REM Author: SuperJakov (https://github.com/SuperJakov)
 GUI r 
 DELAY 1000
-STRING shutdown /s 
-ENTER
-DELAY 1000 
+STRING shutdown /s /t 0
 ENTER
