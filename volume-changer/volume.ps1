@@ -49,4 +49,4 @@ public class Audio
 }
 '@
 [audio]::Mute = $false
-[audio]::Volume = 1
+[audio]::Volume = 1 # 100%
