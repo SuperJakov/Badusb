@@ -2,5 +2,4 @@ REM rickroll (OUTDATED)
 REM execution time: 1.4
 GUI r
 DELAY 400
-STRING https://www.youtube.com/watch?v=xvFZjo5PgG0
-ENTER
+STRINGLN https://www.youtube.com/watch?v=xvFZjo5PgG0

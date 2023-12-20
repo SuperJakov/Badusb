@@ -3,5 +3,4 @@ REM Target OS: Windows 10+
 REM Author: SuperJakov (https://github.com/SuperJakov)
 GUI r 
 DELAY 1000
-STRING shutdown /r /t 0
-ENTER
+STRINGLN shutdown /r /t 0

