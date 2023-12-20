@@ -1,0 +1,8 @@
+REM Title: Kill stealer
+REM Description: End the info stealer even if its hidden
+REM Target OS: Windows 10+
+REM Author: SuperJakov (https://github.com/SuperJakov)
+
+GUI r 
+DELAY 500
+STRINGLN powershell -w h Start-Process -FilePath "taskkill" -ArgumentList "/F", "/IM", "powershell.exe"
