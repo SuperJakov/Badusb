@@ -8,10 +8,13 @@ You _can_ use **Flipper zero too**
 
 ### How to use Flipper instead of USB (very slow)
 
-0. Install Flipper's **[MASS STORAGE](https://lab.flipper.net/apps/mass_storage) app**
+#### Pre Runtime
 
-0. Create disk image and format it using your computer
+1. Install Flipper's **[MASS STORAGE](https://lab.flipper.net/apps/mass_storage) app**
 
+2. Create disk image and format it using your computer
+
+#### Runtime
 1. Run the badUsb script
 
 2. Open the flipper zero mass storage app (apps/USB/Mass storage) and load disk image
