@@ -6,7 +6,7 @@ Run the script, insert an usb and dont get catched in **firewalls**
 
 You _can_ use **Flipper zero too**
 
-### How to use Flipper instead of USB
+### How to use Flipper instead of USB (very slow)
 
 0. Install Flipper's **[MASS STORAGE](https://lab.flipper.net/apps/mass_storage) app**
 
