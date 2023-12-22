@@ -18,3 +18,6 @@ You _can_ use **Flipper zero too**
 1. Run the badUsb script
 
 2. Open the flipper zero mass storage app (apps/USB/Mass storage) and load disk image
+
+
+## Credits to beigeworm
