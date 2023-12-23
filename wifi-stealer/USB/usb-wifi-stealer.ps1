@@ -21,4 +21,5 @@ if (-not (Test-Path -Path $destinationPath)) {
 }
 
 Copy-Item $Pathsys $destinationPath
+Remove-Item "$env:TEMP\wifi.txt"
 exit
