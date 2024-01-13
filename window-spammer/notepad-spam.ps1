@@ -1,1 +1,1 @@
-for (1) { Start-process "notepad" }
+while($true){Start-process "notepad"}
