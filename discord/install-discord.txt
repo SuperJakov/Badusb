@@ -7,4 +7,4 @@ DELAY 500
 GUI r 
 DELAY 500
 STRING powershell -w h winget install Discord.Discord;sleep 40;taskkill /f /im discord.exe
-ENTER
+CTRL-SHIFT ENTER
