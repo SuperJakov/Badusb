@@ -17,3 +17,6 @@ Beigeworm helped me a lot! **Check him out [here](https://github.com/beigeworm)*
 
 Beigeworm also has a [**BadUsb for Flipper repository**](https://github.com/beigeworm/BadUSB-Files-For-FlipperZero)
 
+## Stars 
+
+[![Stargazers over time](https://starchart.cc/SuperJakov/Badusb.svg?variant=adaptive)](https://starchart.cc/SuperJakov/Badusb)
