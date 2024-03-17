@@ -4,6 +4,8 @@ let badusb = require("badusb");
 let notify = require("notification");
 let diskPath = "/ext/apps_data/mass_storage/128MB.img";
 
+// Only supported layout is US right now
+
 if (!storage.exists(diskPath)) {
   print("Creating image...");
   usbdisk.createImage(diskPath, 128 * 1024 * 1024);
@@ -21,7 +23,7 @@ while (!badusb.isConnected()) {
 
 // After connected
 
-notify.blink("red", "short");
+notify.blink("red", "long");
 print("USB is connected");
 badusb.press("GUI", "r");
 delay(500);
@@ -30,12 +32,14 @@ badusb.println(
 );
 badusb.quit();
 delay(3000);
-print("Starting UsbDisk...");
 usbdisk.start(diskPath);
+print("UsbDisk startsed...");
 //print("Started, waiting until ejected...");
 while (!usbdisk.wasEjected()) {
+  notify.blink("green", "long");
   delay(1000);
 }
+notify.success();
 print("Ejected, stopping UsbDisk...");
 usbdisk.stop();
 print("Done");
