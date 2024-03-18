@@ -8,6 +8,8 @@
 
 - After the executable is ran, you can unplug the Flipper
 
+- Only works on **Windows** pc's with **UK** and **US** layout
+
 ## Instructions
 
 First time when adding a image to flipper, you will have to format **the drive** and add **executable file** to the drive. Flipper will instruct you when to do it.
