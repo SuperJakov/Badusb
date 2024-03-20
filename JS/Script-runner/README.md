@@ -8,7 +8,7 @@
 
 - After the executable is ran, you can unplug the Flipper
 
-- Only works on **Windows** pc's with **UK** and **US** layout
+- Only works on **Windows** pc's with **US** layout
 
 ## Instructions
 
