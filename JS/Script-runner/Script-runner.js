@@ -4,44 +4,22 @@ let badusb = require("badusb");
 let notify = require("notification");
 let submenu = require("submenu");
 let dialog = require("dialog");
-submenu.setHeader("What size for image?");
-submenu.addItem("64MB", 0);
-submenu.addItem("128MB", 1);
-submenu.addItem("256MB", 2);
-submenu.addItem("512MB", 3);
-let result = submenu.show();
-
-let diskPath = "";
-let imgSize = 0; // mb
-
-if (result === 0) {
-  diskPath = "/ext/apps_data/mass_storage/64MB.img";
-  imgSize = 64; // mb
+let sizes = [64, 128, 256, 512];
+submenu.setHeader("What size for img?");
+for (let i = 0; i < sizes.length; i++) {
+  submenu.addItem(to_string(sizes[i]) + "MB", sizes[i]);
 }
-if (result === 1) {
-  diskPath = "/ext/apps_data/mass_storage/128MB.img";
-  imgSize = 128; // mb
+let imgSize = submenu.show();
+if (typeof imgSize !== "number") {
+  die("No image size selected");
 }
-if (result === 2) {
-  diskPath = "/ext/apps_data/mass_storage/256MB.img";
-  imgSize = 256; // mb
-}
-if (result === 3) {
-  diskPath = "/ext/apps_data/mass_storage/512MB.img";
-  imgSize = 512; // mb
-}
-
+let diskPath = "/ext/apps_data/mass_storage/" + to_string(imgSize) + "MB.img";
 print("Img size: " + to_string(imgSize) + "mb");
+
 if (!storage.exists(diskPath)) {
   print("Creating image...");
   usbdisk.createImage(diskPath, imgSize * 1024 * 1024);
   usbdisk.start(diskPath);
-  notify.error();
-  print("Format the disk...");
-  while (!dialog.message("Format disk", "Press OK when disk is formatted")) {
-    delay(250);
-  }
-  print("User formatted disk");
   notify.error();
   while (
     !dialog.message(
@@ -85,7 +63,7 @@ print("Running script");
 usbdisk.start(diskPath);
 notify.success();
 while (!usbdisk.wasEjected()) {
-  notify.blink("green", "long");
+  notify.blink("green", "short");
   delay(1000);
 }
 notify.success();
