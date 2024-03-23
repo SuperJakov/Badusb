@@ -4,7 +4,7 @@
 
 - Big .exe files **aren't recommended**
 
-- Flipper serial is very **slow**, so this isn't a quick execution. 
+- Flipper serial is very **slow**, so this isn't a quick execution.
 
 - After the executable is ran, you can unplug the Flipper
 
