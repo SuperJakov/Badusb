@@ -1,7 +1,3 @@
-$scriptPath = "script.exe"
-$removableDrives = Get-WmiObject Win32_LogicalDisk | Where-Object { $_.DriveType -eq 2 }
-$count = $removableDrives.count
-$i = 30
 $Async = '[DllImport("user32.dll")] public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);'
 $Type = Add-Type -MemberDefinition $Async -name Win32ShowWindowAsync -namespace Win32Functions -PassThru
 $hwnd = (Get-Process -PID $pid).MainWindowHandle
@@ -14,14 +10,33 @@ else {
   $hwnd = $Proc.MainWindowHandle
   $Type::ShowWindowAsync($hwnd, 0)
 }
+
+$scriptPath = $null;
+if (!$scriptName) {
+  $scriptPath = "script.exe"
+}
+else {
+  $scriptPath = $scriptName
+}
+Write-host $scriptPath
+$removableDrives = Get-WmiObject Win32_LogicalDisk | Where-Object { $_.DriveType -eq 2 }
+$count = $removableDrives.count
+$i = 30
+
+
 While ($true) {
   Clear-host
   Write-Host "Connect a Device.. ($i)" -ForegroundColor Yellow
   $removableDrives = Get-WmiObject Win32_LogicalDisk | Where-Object { $_.DriveType -eq 2 }
-  sleep 1
-  if (!($count -eq $removableDrives.count)) {
+  Start-sleep 1
+  if ($count -gt $removableDrives.count) {
     Write-Host "USB Drive Connected!" -ForegroundColor Green
     break
+  }
+  if ($count -lt $removableDrives.count) {
+    $count = $removableDrives.count
+    $i--
+    continue
   }
   $i--
   if ($i -eq 0 ) {

