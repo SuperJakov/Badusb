@@ -1,7 +1,8 @@
-let layout = "en-US";
+let layout = "en-US"; // more layouts found in README
 let scriptName = "script.exe";
 //let scriptName = undefined;
 // undefined = script.exe (default)
+let textbox = require("textbox");
 let usbdisk = require("usbdisk");
 let storage = require("storage");
 let badusb = require("badusb");
@@ -14,14 +15,18 @@ for (let i = 0; i < sizes.length; i++) {
   submenu.addItem(to_string(sizes[i]) + "MB", sizes[i]);
 }
 let imgSize = submenu.show();
+textbox.setConfig("end", "text");
+textbox.emptyText();
+// Non-blocking, can keep updating text after, can close in JS or in GUI
+textbox.show();
 if (typeof imgSize !== "number") {
   die("No image size selected");
 }
 let diskPath = "/ext/apps_data/mass_storage/" + to_string(imgSize) + "MB.img";
-print("Img size: " + to_string(imgSize) + "mb");
+textbox.addText("Img size: " + to_string(imgSize) + "mb\n");
 
 if (!storage.exists(diskPath)) {
-  print("Creating image...");
+  textbox.addText("Creating image...\n");
   usbdisk.createImage(diskPath, imgSize * 1024 * 1024);
   usbdisk.start(diskPath);
   notify.error();
@@ -37,7 +42,7 @@ if (!storage.exists(diskPath)) {
   usbdisk.stop();
 }
 
-print("Starting badusb...");
+textbox.addText("Starting badusb...\n");
 
 badusb.setup({
   vid: 0xaaaa,
@@ -47,14 +52,14 @@ badusb.setup({
   layout_path: "/ext/badusb/assets/layouts/" + layout + ".kl",
 });
 // Wait until connected
-print("Connect device to USB");
+textbox.addText("Connect device to USB\n");
 while (!badusb.isConnected()) {
   notify.blink("red", "short");
   delay(1000);
 }
 
 // After connected
-print("USB is connected");
+textbox.addText("USB is connected\n");
 notify.success();
 badusb.press("GUI", "r");
 delay(500);
@@ -72,19 +77,22 @@ if (scriptName) {
 
 badusb.quit();
 delay(4000);
-print("Running script");
-
+textbox.addText("Running script\n");
 usbdisk.start(diskPath);
 notify.success();
 while (!usbdisk.wasEjected()) {
   notify.blink("green", "short");
   delay(250);
 }
-notify.success();
-print("Ejected, stopping UsbDisk...");
+textbox.addText("Ejected, stopping UsbDisk...\n");
 usbdisk.stop();
-print("Done");
+textbox.addText("Done\n");
+textbox.addText("Press back to exit");
+notify.success();
 for (let i = 0; i < 5; i++) {
   notify.blink("green", "short");
-  delay(50);
+  delay(100);
+}
+while (textbox.isOpen()) {
+  delay(100);
 }
