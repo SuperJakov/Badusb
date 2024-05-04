@@ -31,13 +31,13 @@ While ($true) {
   $removableDrives = Get-WmiObject Win32_LogicalDisk | Where-Object { $_.DriveType -eq 2 }
   Start-sleep 1
   if ($count -gt $removableDrives.count) {
-    Write-Host "USB Drive Connected!" -ForegroundColor Green
-    break
-  }
-  if ($count -lt $removableDrives.count) {
     $count = $removableDrives.count
     $i--
     continue
+  }
+  if ($count -lt $removableDrives.count) {
+    Write-Host "USB Drive Connected!" -ForegroundColor Green
+    break
   }
   $i--
   if ($i -eq 0 ) {
